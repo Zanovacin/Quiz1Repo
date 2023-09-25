@@ -1,7 +1,29 @@
-# Read the file VendorList.csv into this program and create a dictionary of the customer's
-# full name, email address and phone number where the key is the full name of the customer
+# import csv
+import csv
+
+
+
+
+#Read the file VendorList.csv into this program and create a dictionary of the customer's
+#  full name, email address and phone number where the key is the full name of the customer
 # and the value is a dictionary where the keys are 'email' and 'phone' and the values
 # are the corresponding email address and phone number of the customer. 
+infile = open('VendorList.csv','r')
+
+customer_dict = {}
+
+
+print(customer_dict)
+
+        
+     
+        
+
+
+
+
+
+
 
 # Once the dictionary has been completed print it out. It shoud resemble what is shown
 # below (first 2 and last 2 elements shown only):
@@ -24,22 +46,23 @@
 import csv
 
 # open the vendorlist file
-
+infile = open('VendorList.csv','r')
 
 # create a csv object from the file object
-
+csv_object = csv.reader(infile)
 
 # create an output file
 
-
-
+outfile = open('marketinglistFINAL.csv','w')
 
 
 # create an empty dictionary
 
-
+new_dict = {}
 
 # iterate through the csv object
+
+for row in csv_object:
 
 
 
@@ -54,7 +77,6 @@ import csv
 
 # iternate through the dictionary and write to the output file
 
-
-
 # close your output file
 
+outfile.close()
